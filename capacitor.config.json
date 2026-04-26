@@ -1,0 +1,8 @@
+{
+  "appId": "br.zetta.crcc",
+  "appName": "CRCC App",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}
