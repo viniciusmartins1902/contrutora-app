@@ -1,8 +1,22 @@
 {
   "appId": "br.zetta.crcc",
-  "appName": "CRCC App",
+  "appName": "CRCC - Zetta",
   "webDir": "dist",
   "server": {
-    "androidScheme": "https"
+    "androidScheme": "https",
+    "allowedOrigins": [
+      "https://crcc.zetta.net.br",
+      "http://localhost",
+      "http://localhost:5173",
+      "https://localhost:5173"
+    ]
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    },
+    "CapacitorHttp": {
+      "enabled": true
+    }
   }
 }

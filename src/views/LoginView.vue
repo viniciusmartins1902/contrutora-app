@@ -1,9 +1,10 @@
 <template>
   <div class="screen login-screen">
     <div class="login-hero">
-      <div class="login-logo">C</div>
-      <h1>CRCC</h1>
-      <p>Gestão de obras</p>
+      <div class="login-logo">
+        <img src="/logo.jpeg" alt="Logo" class="login-logo-img" />
+      </div>
+      <p class="login-subtitle">Zetta a serviço da CRCC</p>
     </div>
 
     <div class="login-form">
@@ -65,7 +66,7 @@ async function login() {
 
 <style scoped>
 .login-screen {
-  background: linear-gradient(160deg, #0f1923 0%, #1a2535 100%);
+  background: #f5f7fa;
   justify-content: flex-end;
 }
 .login-hero {
@@ -76,20 +77,21 @@ async function login() {
   justify-content: center;
 }
 .login-logo {
-  width: 72px; height: 72px;
-  background: var(--primary);
-  border-radius: 22px;
-  color: #0f1923;
-  font-size: 32px;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-  box-shadow: 0 8px 32px rgba(79,195,247,.3);
+  width: 160px; height: 160px;
+  border-radius: 32px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: transparent;
 }
-.login-hero h1 { font-size: 26px; font-weight: 800; color: #fff; }
+.login-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.login-hero h1 { font-size: 26px; font-weight: 800; color: var(--text); }
 .login-hero p  { font-size: 14px; color: var(--muted); margin-top: 4px; }
+.login-subtitle { font-size: 13px; color: var(--muted); margin-top: 8px; font-weight: 500; }
 .login-form {
   background: var(--surface);
   border-radius: 24px 24px 0 0;
@@ -99,8 +101,8 @@ async function login() {
 .spinner-inline {
   display: inline-block;
   width: 18px; height: 18px;
-  border: 2px solid rgba(0,0,0,.2);
-  border-top-color: #0f1923;
+  border: 2px solid rgba(0,0,0,.15);
+  border-top-color: #fff;
   border-radius: 50%;
   animation: spin .7s linear infinite;
   vertical-align: middle;

@@ -1,10 +1,13 @@
 <template>
   <div class="screen">
     <div class="topbar">
-      <button class="back-btn" @click="$router.back()">
-        ← Voltar
+      <button class="back-btn" @click="$router.back()" title="Voltar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+          <path d="M15 19l-7-7 7-7"/>
+        </svg>
       </button>
-      <div style="font-size:13px;color:var(--muted)">OS #{{ os?.id }}</div>
+      <div style="font-size:13px;color:var(--muted);padding:0 12px">OS #{{ os?.id }}</div>
+      <div style="width: 40px"></div>
     </div>
 
     <div class="scroll">
@@ -107,9 +110,9 @@ function irParaRDO() {
 
 <style scoped>
 .os-badges  { display: flex; gap: 8px; margin-bottom: 10px; }
-.os-titulo  { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.os-titulo  { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
 .os-meta    { display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--muted); margin-bottom: 12px; }
-.meta-label { color: rgba(255,255,255,.3); margin-right: 4px; }
+.meta-label { color: rgba(0,0,0,0.35); margin-right: 4px; }
 .os-descricao { font-size: 14px; color: var(--muted); line-height: 1.5; border-top: 1px solid var(--border); padding-top: 12px; margin-top: 4px; }
 
 .acoes { display: flex; gap: 8px; flex-wrap: wrap; }
@@ -122,5 +125,12 @@ function irParaRDO() {
   font-size: 13px;
   padding: 10px 14px;
   margin-top: 12px;
+}
+.topbar-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  opacity: 0.7;
 }
 </style>
