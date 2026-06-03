@@ -8,7 +8,7 @@
 import { auth } from './stores/auth'
 
 const BASE_URL = import.meta.env.VITE_API_URL || 'https://crcc.zetta.net.br'
-const API      = `${BASE_URL}/construtora/api`
+const API      = `${BASE_URL}/api`
 
 
 function getToken() {
